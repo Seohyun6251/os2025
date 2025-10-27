@@ -6,7 +6,7 @@ history
 
 깃 명령어
 git branch -M main
-git remote add origin https://github.com/아이디/원격리포지토리이름.git
+git remote add origin https://github.com/아/원격리포지토리이름.git
 git push -u origin main
 git push
 git remote -v
