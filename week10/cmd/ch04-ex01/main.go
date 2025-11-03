@@ -1,6 +1,8 @@
 package main
 
-import "week10/pkg/greeting"
+import (
+	"week10/pkg/greeting"
+)
 
 func main() {
 	greeting.Hello()
