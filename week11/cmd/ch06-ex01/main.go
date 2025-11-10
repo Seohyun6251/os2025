@@ -3,16 +3,17 @@ package main
 import "fmt"
 
 func main() {
-	// var subjects []string
-	// subjects = make([]string, 3)
 
-	// subjects := make([]string,3)
-	// subjects[0] = "Go"
-	// subjects[2] = "Python"
+	subjects := []string{"Go", "javascript", "Python", "Linux"} // slice literal
 
-	subjects := []string{"Go", "", "Python"} // slice literal
+	subjectsSlice := subjects[1:3] //슬라이싱
+	//l = list()
 
 	for _, subject := range subjects {
 		fmt.Println(subject)
+	}
+	fmt.Println("==================")
+	for i := 0; i < len(subjectsSlice); i++ {
+		fmt.Println(subjectsSlice[i])
 	}
 }
