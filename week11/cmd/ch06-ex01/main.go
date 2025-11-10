@@ -4,10 +4,11 @@ import "fmt"
 
 func main() {
 
-	subjects := []string{"Go", "javascript", "Python", "Linux"} // slice literal
+	subjects := [4]string{"Go", "javascript", "Python", "Linux"} // slice literal
 
-	subjectsSlice := subjects[1:3] //슬라이싱
-	//l = list()
+	subjectsSlice := subjects[:3] //슬라이싱
+	subjectsSlice[0] = "java"
+	subjects[0] = "java"
 
 	for _, subject := range subjects {
 		fmt.Println(subject)
@@ -16,4 +17,5 @@ func main() {
 	for i := 0; i < len(subjectsSlice); i++ {
 		fmt.Println(subjectsSlice[i])
 	}
+
 }
