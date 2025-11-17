@@ -1,22 +1,24 @@
 package main
 
-import (
-	"fmt"
-	"log"
+import "fmt"
 
-	"github.com/headfirstgo/datafile"
-)
+type subcriber struct {
+	name  string
+	price int
+}
+
+func applyPrice(s *subcriber) {
+	s.price = 10000
+	s.name = "Park Inha"
+}
 
 func main() {
-	lines, err := datafile.GetStrings("votes.txt")
-	if err != nil {
-		log.Fatal(err)
-	}
-	counts := make(map[string]int)
-	for _, line := range lines {
-		counts[line]++
-	}
-	for name, count := range counts {
-		fmt.Println(name, ":", count)
-	}
+	var s1 subcriber
+	var p *subcriber = &s1
+	// s1.name = "Kim Inha"
+	applyPrice(&s1)
+	fmt.Println(s1.name, s1.price)
+	// fmt.Println(*p.price) 오류
+	fmt.Println((*p).price)
+	fmt.Println(p.price)
 }
